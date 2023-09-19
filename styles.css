@@ -23,38 +23,30 @@ body {
 
 /* Style the header */
 .header {
-    font-size: 36px;
+    font-size: 24px; /* Reduce the header font size */
     font-weight: bold;
     color: #24292e; /* GitHub's text color */
     margin-bottom: 20px;
 }
 
-/* Style the subtext */
-.subtext {
-    font-size: 18px;
-    margin-top: 10px;
-    font-family: 'Open Sans', sans-serif; /* Creative font */
-    margin-bottom: 30px;
-}
-
 /* Style the repository list */
 .repos {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start; /* Align repositories to the left */
+    flex-wrap: nowrap; /* Prevent wrapping to fit vertically in a single line */
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
     max-width: 980px; /* Match GitHub's max-width for content */
     margin: 0 auto; /* Center the container */
 }
 
 .repo-card {
-    flex-basis: calc(33.33% - 20px);
+    flex: 0 0 auto; /* Ensure the cards don't grow in width */
     margin-right: 20px; /* Add spacing between cards */
-    margin-bottom: 20px;
     background-color: #fff; /* GitHub's card background color */
     border: 1px solid #e1e4e8; /* GitHub's card border color */
     border-radius: 6px;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1); /* GitHub's card shadow */
     overflow: hidden; /* Hide overflow text */
+    width: 300px; /* Adjust the width of each card */
 }
 
 .repo-card h4 {
