@@ -70,10 +70,17 @@ body {
     color: #555; /* Gray text color */
 }
 
-/* Remove link styles */
-.repo-card a {
+/* Style the "View on GitHub" link */
+.repo-card .github-link {
+    color: #007AFF; /* Blue link color */
     text-decoration: none;
-    color: inherit;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+/* Hover effect for the "View on GitHub" link */
+.repo-card .github-link:hover {
+    color: #0041E8; /* Darker blue on hover */
 }
 
 /* Hover effect for repository cards */
