@@ -42,9 +42,40 @@ body {
 .repos {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center; /* Center the cards horizontally */
     margin-top: 20px; /* Add some space above the cards */
 }
 
 .repo-card {
-    flex-basis: calc(33.33
+    flex-basis: calc(33.33% - 20px);
+    margin: 0 10px 20px; /* Add margin around each card */
+    padding: 20px;
+    background-color: #fff; /* White background for cards */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Align text to the left */
+}
+
+.repo-card h4 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #222; /* Dark gray title color */
+    margin-bottom: 10px;
+}
+
+.repo-card p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #555; /* Gray text color */
+}
+
+.repo-card a {
+    color: #007AFF; /* Blue link color */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.repo-card a:hover {
+    color: #0041E8; /* Darker blue on hover */
+}
