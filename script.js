@@ -19,13 +19,29 @@ async function fetchAndDisplayRepos() {
             return;
         }
 
-        const reposList = document.createElement('ul');
-        reposList.classList.add('repo-list');
+        const reposList = document.createElement('div');
+        reposList.classList.add('repos-list');
 
         repos.forEach(repo => {
-            const repoItem = document.createElement('li');
-            repoItem.innerHTML = `<a href="${repo.html_url}" target="_blank">${repo.name}</a> - ${repo.description}`;
-            reposList.appendChild(repoItem);
+            const repoCard = document.createElement('div');
+            repoCard.classList.add('repo-card');
+
+            const repoTitle = document.createElement('h4');
+            repoTitle.textContent = repo.name;
+
+            const repoDescription = document.createElement('p');
+            repoDescription.textContent = repo.description;
+
+            const repoLink = document.createElement('a');
+            repoLink.textContent = 'View on GitHub';
+            repoLink.href = repo.html_url;
+            repoLink.target = '_blank';
+
+            repoCard.appendChild(repoTitle);
+            repoCard.appendChild(repoDescription);
+            repoCard.appendChild(repoLink);
+
+            reposList.appendChild(repoCard);
         });
 
         reposContainer.appendChild(reposList);
