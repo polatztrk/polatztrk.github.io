@@ -40,31 +40,39 @@ body {
 
 /* Style the repository list */
 .repos {
-    max-height: 300px;
-    overflow-y: scroll;
-    text-align: left;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.repo-card {
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.repo-list {
-    list-style: none;
-    padding: 0;
+.repo-card h4 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
 }
 
-.repo-list li {
-    margin-bottom: 15px;
+.repo-card p {
+    font-size: 16px;
+    color: #555;
 }
 
-.repo-list a {
+.repo-card a {
     color: #007BFF;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
 
-.repo-list a:hover {
+.repo-card a:hover {
     color: #ff6600; /* Orange color on hover */
 }
