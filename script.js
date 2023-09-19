@@ -19,8 +19,7 @@ async function fetchAndDisplayRepos() {
             return;
         }
 
-        const reposList = document.createElement('div');
-        reposList.classList.add('repos-list');
+        reposContainer.innerHTML = ''; // Clear any previous content
 
         repos.forEach(repo => {
             const repoCard = document.createElement('div');
@@ -41,10 +40,8 @@ async function fetchAndDisplayRepos() {
             repoCard.appendChild(repoDescription);
             repoCard.appendChild(repoLink);
 
-            reposList.appendChild(repoCard);
+            reposContainer.appendChild(repoCard);
         });
-
-        reposContainer.appendChild(reposList);
     } catch (error) {
         console.error('Error fetching repositories:', error);
     }
