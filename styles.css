@@ -1,5 +1,5 @@
 /* Reset some default styles */
-body, h1, p {
+body, h1, p, ul, li {
     margin: 0;
     padding: 0;
 }
@@ -13,6 +13,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
 }
 
 /* Style the container */
@@ -26,6 +27,7 @@ body {
     font-weight: bold;
     color: #ff6600; /* Orange color */
     font-family: 'Pacifico', cursive; /* Creative font */
+    margin-bottom: 20px;
 }
 
 /* Style the subtext */
@@ -33,4 +35,36 @@ body {
     font-size: 18px;
     margin-top: 10px;
     font-family: 'Open Sans', sans-serif; /* Creative font */
+    margin-bottom: 30px;
+}
+
+/* Style the repository list */
+.repos {
+    max-height: 300px;
+    overflow-y: scroll;
+    text-align: left;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.repo-list {
+    list-style: none;
+    padding: 0;
+}
+
+.repo-list li {
+    margin-bottom: 15px;
+}
+
+.repo-list a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.repo-list a:hover {
+    color: #ff6600; /* Orange color on hover */
 }
