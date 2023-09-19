@@ -61,6 +61,7 @@ body {
     font-weight: 700;
     color: #222; /* Dark gray title color */
     margin-bottom: 10px;
+    cursor: pointer; /* Change cursor to pointer for clickable links */
 }
 
 .repo-card p {
@@ -69,13 +70,13 @@ body {
     color: #555; /* Gray text color */
 }
 
+/* Remove link styles */
 .repo-card a {
-    color: #007AFF; /* Blue link color */
     text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s;
+    color: inherit;
 }
 
-.repo-card a:hover {
-    color: #0041E8; /* Darker blue on hover */
+/* Hover effect for repository names */
+.repo-card h4:hover {
+    color: #007AFF; /* Blue color on hover */
 }
