@@ -6,9 +6,9 @@ body, h1, p, ul, li {
 
 /* Set a background color and text color for the page */
 body {
-    background-color: #f6f8fa; /* GitHub's background color */
-    font-family: Arial, sans-serif;
-    color: #333;
+    background-color: #f9f9fa; /* Light gray background */
+    font-family: 'Inter', sans-serif; /* Use Inter font */
+    color: #222; /* Dark text color */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,55 +23,28 @@ body {
 
 /* Style the header */
 .header {
-    font-size: 24px; /* Reduce the header font size */
-    font-weight: bold;
-    color: #24292e; /* GitHub's text color */
+    font-size: 36px;
+    font-weight: 700;
+    color: #333; /* Dark gray header color */
     margin-bottom: 20px;
+}
+
+/* Style the subtext */
+.subtext {
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: 400;
+    color: #666; /* Gray subtext color */
+    margin-bottom: 30px;
 }
 
 /* Style the repository list */
 .repos {
     display: flex;
-    flex-wrap: nowrap; /* Prevent wrapping to fit vertically in a single line */
-    overflow-x: auto; /* Enable horizontal scrolling if needed */
-    max-width: 980px; /* Match GitHub's max-width for content */
-    margin: 0 auto; /* Center the container */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px; /* Add some space above the cards */
 }
 
 .repo-card {
-    flex: 0 0 auto; /* Ensure the cards don't grow in width */
-    margin-right: 20px; /* Add spacing between cards */
-    background-color: #fff; /* GitHub's card background color */
-    border: 1px solid #e1e4e8; /* GitHub's card border color */
-    border-radius: 6px;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1); /* GitHub's card shadow */
-    overflow: hidden; /* Hide overflow text */
-    width: 300px; /* Adjust the width of each card */
-}
-
-.repo-card h4 {
-    font-size: 16px; /* GitHub's card title font size */
-    font-weight: 600;
-    margin: 8px 16px;
-    color: #0366d6; /* GitHub's link color */
-}
-
-.repo-card p {
-    font-size: 14px; /* GitHub's card description font size */
-    margin: 8px 16px;
-    color: #586069; /* GitHub's text color */
-}
-
-.repo-card a {
-    display: block;
-    padding: 8px 16px;
-    background-color: #f1f8ff; /* GitHub's link background color on hover */
-    color: #0366d6; /* GitHub's link color */
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-.repo-card a:hover {
-    background-color: #c8e1ff; /* GitHub's link background color on hover */
-}
+    flex-basis: calc(33.33
