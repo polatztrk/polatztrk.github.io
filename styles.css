@@ -1,109 +1,70 @@
 /* Reset some default styles */
-body, h1, h2, h3, p, ul, li {
+body, h1, p, ul, li {
     margin: 0;
     padding: 0;
 }
 
 /* Set a background color and text color for the page */
 body {
-    background-color: #f4f4f4;
-    font-family: 'Roboto', Arial, sans-serif;
-    color: #333;
-}
-
-/* Container for layout */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Header styles */
-.header {
-    background-color: #007BFF;
+    background-color: #333;
+    font-family: Arial, sans-serif;
     color: #fff;
-    padding: 20px 0;
-}
-
-.header .logo {
-    font-size: 36px;
-    font-weight: bold;
-}
-
-.header .nav ul {
-    list-style: none;
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
 }
 
-.header .nav ul li {
-    margin-right: 20px;
+/* Style the container */
+.container {
+    text-align: center;
 }
 
-.header .nav ul li:last-child {
-    margin-right: 0;
+/* Style the header */
+.header {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ff6600; /* Orange color */
+    font-family: 'Pacifico', cursive; /* Creative font */
+    margin-bottom: 20px;
 }
 
-.header .nav a {
-    color: #fff;
+/* Style the subtext */
+.subtext {
+    font-size: 18px;
+    margin-top: 10px;
+    font-family: 'Open Sans', sans-serif; /* Creative font */
+    margin-bottom: 30px;
+}
+
+/* Style the repository list */
+.repos {
+    max-height: 300px;
+    overflow-y: scroll;
+    text-align: left;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.repo-list {
+    list-style: none;
+    padding: 0;
+}
+
+.repo-list li {
+    margin-bottom: 15px;
+}
+
+.repo-list a {
+    color: #007BFF;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
 
-.header .nav a:hover {
-    color: #ff6600;
-}
-
-/* Hero section styles */
-.hero {
-    text-align: center;
-    padding: 100px 0;
-}
-
-.hero .subtext {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-}
-
-/* Main content section styles */
-.main-content {
-    padding: 40px 0;
-}
-
-.section-heading {
-    font-size: 32px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.project {
-    flex-basis: calc(33.33% - 20px);
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.project h4 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-/* Footer styles */
-.footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
+.repo-list a:hover {
+    color: #ff6600; /* Orange color on hover */
 }
